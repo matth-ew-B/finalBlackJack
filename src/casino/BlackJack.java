@@ -456,7 +456,7 @@ public class BlackJack extends javax.swing.JFrame {
     private void betActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_betActionPerformed
      //starts over the game
 
-        if (betValue > 0 && betValue < findMoney()) {
+        if (Integer.parseInt(jBet.getText()) > 0 && Integer.parseInt(jBet.getText()) < findMoney()) {
             restart();
             //hides bet button and shows hit and hold
             setVis(false);
