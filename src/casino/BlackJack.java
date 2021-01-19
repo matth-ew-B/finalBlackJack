@@ -78,7 +78,7 @@ public class BlackJack extends javax.swing.JFrame {
         TotMoney = new javax.swing.JLabel();
         handTot = new javax.swing.JLabel();
         dealerTot = new javax.swing.JLabel();
-        dCard1 = new javax.swing.JLabel();
+        dCard10 = new javax.swing.JLabel();
         dCard2 = new javax.swing.JLabel();
         dCard3 = new javax.swing.JLabel();
         dCard4 = new javax.swing.JLabel();
@@ -101,7 +101,7 @@ public class BlackJack extends javax.swing.JFrame {
         card12 = new javax.swing.JLabel();
         card13 = new javax.swing.JLabel();
         dCard9 = new javax.swing.JLabel();
-        dCard10 = new javax.swing.JLabel();
+        dCard1 = new javax.swing.JLabel();
         dCard11 = new javax.swing.JLabel();
         dCard12 = new javax.swing.JLabel();
         dCard13 = new javax.swing.JLabel();
@@ -201,7 +201,7 @@ public class BlackJack extends javax.swing.JFrame {
         TotMoney.setForeground(new java.awt.Color(255, 255, 255));
         TotMoney.setText("Total money: $");
 
-        dCard1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dCard10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         totMone.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         totMone.setForeground(new java.awt.Color(255, 255, 255));
@@ -287,9 +287,9 @@ public class BlackJack extends javax.swing.JFrame {
                                         .addComponent(jLabel3)
                                         .addGap(558, 558, 558))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(dCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(dCard10, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(dCard2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -381,7 +381,7 @@ public class BlackJack extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(dCard10, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dCard4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dCard7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dCard8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,7 +389,7 @@ public class BlackJack extends javax.swing.JFrame {
                                             .addComponent(dCard5, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dCard6, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(dCard3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(dCard1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(dCard10, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGap(29, 29, 29)
@@ -603,7 +603,7 @@ public class BlackJack extends javax.swing.JFrame {
         public static void endTurn() {
         //resets position from player turn and creates a new array of positions for the dealer
         pos = 0;
-        cardpos = new JLabel[]{dCard2, dCard3, dCard4, dCard5, dCard6, dCard7, dCard8, dCard9, dCard10, dCard11, dCard12, dCard13};
+        cardpos = new JLabel[]{dCard2, dCard3, dCard4, dCard5, dCard6, dCard7, dCard8, dCard9, dCard1, dCard11, dCard12, dCard13};
 
         //the bot/dealers turn
         while (botTotal < 17) {
@@ -663,7 +663,7 @@ public class BlackJack extends javax.swing.JFrame {
         pos = 0;
         totMone.setText(findMoney() + "");
         //takes off all card images from the board
-        cardpos = new JLabel[]{card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, dCard2, dCard3, dCard4, dCard5, dCard6, dCard7, dCard8, dCard9, dCard10, dCard11, dCard12, dCard13};
+        cardpos = new JLabel[]{card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, dCard2, dCard3, dCard4, dCard5, dCard6, dCard7, dCard8, dCard9, dCard1, dCard11, dCard12, dCard13};
         for (int i = 0; i < cardpos.length; i++) {
             cardpos[i].setIcon(null);
         }
@@ -678,10 +678,10 @@ public class BlackJack extends javax.swing.JFrame {
         card2.setIcon(imageIcon);
 
         imageIcon = new ImageIcon(new ImageIcon("red_back.png").getImage().getScaledInstance(120, 189, Image.SCALE_DEFAULT));
-        dCard10.setIcon(imageIcon);
+        dCard1.setIcon(imageIcon);
 
         botTotal = drawCard(botTotal);
-        dCard1.setIcon(imageIcon);
+        dCard10.setIcon(imageIcon);
 
         //hides the hit and hold button and shows the bet button
         setVis(true);
