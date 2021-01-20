@@ -608,7 +608,7 @@ public class BlackJack extends javax.swing.JFrame {
             lblDScore.setText("" + botTotal);
 
             //sets the image to its position and moves to the next position
-            cardpos[pos].setIcon(null);
+            cardpos[pos].setIcon(imageIcon);
             pos++;
 
             System.out.println("");
